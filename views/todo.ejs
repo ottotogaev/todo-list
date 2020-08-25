@@ -27,8 +27,9 @@
           <a href="/edit/<%= details._id %>" class="edit">
             <span class="fas fa-edit"></span>
           </a>
-          <a href="/remove/<%= details._id %>" class="remove">
-            <span class="fas fa-times"></span>
+          <form action="/remove/<%= details._id %>" method="POST">
+            <button type="submit" class="remover"> <span class="fas fa-times"></span> </button>
+          </form>
           </a>
         </li>
         <% }) %>

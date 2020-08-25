@@ -77,7 +77,7 @@ app.route('/edit/:id').get((req, res) => {
 
 // Delete
 
-app.route('/remove/:id').get((req, res) => {
+app.route('/remove/:id').post((req, res) => {
   const id = req.params.id;
   _todoTask.findByIdAndRemove(id, err => {
     if(err) return res.send(500, err);
